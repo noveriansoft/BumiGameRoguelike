@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
-  m_Name: Broken Bridge
+  m_Name: Heavy Rain
   m_EditorClassIdentifier: 
-  eventTitle: Broken Bridge
-  description: oh no, the bride is broken!
+  eventTitle: Heavy Rain
+  description: This rain is too heavy to continue.
   choices:
-  - choiceText: Look for a Detour
-    fuelChange: 0
+  - choiceText: Look for Shelter
+    fuelChange: -6
     truckChange: 0
     cargoChange: 0
-  - choiceText: Try Jumping
+  - choiceText: Just push Through
+    fuelChange: -5
+    truckChange: -6
+    cargoChange: -10
+  - choiceText: Wait in the Rain
     fuelChange: 0
     truckChange: 0
-    cargoChange: 0
-  - choiceText: Repair the Bridge
-    fuelChange: 0
-    truckChange: 0
-    cargoChange: 0
+    cargoChange: -20

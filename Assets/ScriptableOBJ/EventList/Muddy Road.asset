@@ -10,20 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
-  m_Name: Heavy Rain
+  m_Name: Muddy Road
   m_EditorClassIdentifier: 
-  eventTitle: Heavy Rain
-  description: Heavy Rain is coming!
+  eventTitle: Muddy Road
+  description: This will damage the tires
+  allLevels: 0
+  minLevel: 2
+  maxLevel: 2
   choices:
-  - choiceText: Look for Shelter
-    fuelChange: 0
-    truckChange: 0
-    cargoChange: 0
   - choiceText: Just push Through
-    fuelChange: 0
+    fuelChange: -5
+    truckChange: -5
+    cargoChange: -5
+  - choiceText: Look for a Detour
+    fuelChange: -10
     truckChange: 0
     cargoChange: 0
-  - choiceText: Wait in the Rain
+  - choiceText: Wait until it dries
     fuelChange: 0
     truckChange: 0
     cargoChange: 0

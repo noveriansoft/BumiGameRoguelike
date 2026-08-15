@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b33c499d51c274da41e2f1ea643ade, type: 3}
+  m_Name: AddMaxCargo
+  m_EditorClassIdentifier: 
+  upgradeName: Add Max Cargo
+  description: Stretch your truck
+  upgradeType: 3
+  value: 10
