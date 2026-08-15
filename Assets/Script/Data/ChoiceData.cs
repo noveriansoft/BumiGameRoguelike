@@ -7,7 +7,13 @@ public class ChoiceData
 {
     public string choiceText;
 
-    public int fuelChange;
-    public int truckChange;
-    public int cargoChange;
+    [Range(0, 100)]
+    public int successChance = 70;
+
+    public OutcomeData successOutcome;
+    public OutcomeData failureOutcome;
+
+    //public int fuelChange;
+    //public int truckChange;
+    //public int cargoChange;
 }

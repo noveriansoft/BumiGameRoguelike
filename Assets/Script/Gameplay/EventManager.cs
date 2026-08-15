@@ -17,6 +17,12 @@ public class EventManager : MonoBehaviour
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text descriptionText;
 
+    [Header("Result UI")]
+    [SerializeField] private GameObject resultPanel;
+    [SerializeField] private TMP_Text resultText;
+    [SerializeField] private TMP_Text resultDescText;
+    private bool waitingForContinue;
+
     [SerializeField] private Button[] choiceButtons;
     [SerializeField] private TMP_Text[] choiceTexts;
 
@@ -74,68 +80,54 @@ public class EventManager : MonoBehaviour
         }
     }
 
+    private void ShowResult(string title, string description)
+    {
+        resultPanel.SetActive(true);
+
+        resultText.text = title;
+        resultDescText.text = description;
+
+        waitingForContinue = true;
+    }
+
     public void SelectChoice(int index)
     {
         ChoiceData choice = currentEvent.choices[index];
 
-        ResourceManager.Instance.ModifyFuel(choice.fuelChange);
-        ResourceManager.Instance.ModifyTruckCondition(choice.truckChange);
-        ResourceManager.Instance.ModifyCargo(choice.cargoChange);
+        #region old outcome code
+        //ResourceManager.Instance.ModifyFuel(choice.fuelChange);
+        //ResourceManager.Instance.ModifyTruckCondition(choice.truckChange);
+        //ResourceManager.Instance.ModifyCargo(choice.cargoChange);
+        #endregion
 
-        #region lose condition
-        //if (ResourceManager.Instance.IsDead())
+        bool success = Random.Range(0, 100) < choice.successChance;
+
+        OutcomeData outcome = success ? choice.successOutcome : choice.failureOutcome;
+        ResourceManager.Instance.ModifyFuel(outcome.fuelChange);
+        ResourceManager.Instance.ModifyTruckCondition(outcome.truckChange);
+        ResourceManager.Instance.ModifyCargo(outcome.cargoChange);
+        eventPanel.SetActive(false);
+        ShowResult(success ? "SUCCESS" : "FAILURE",outcome.resultText);
+        Debug.Log(outcome.resultText);
+
+        return;
+
+        //RunManager.Instance.AdvanceStage();
+
+        //if (RunManager.Instance.IsChoosingUpgrade)
         //{
-        //    Debug.Log("GAME OVER");
         //    eventPanel.SetActive(false);
-
-        //    RunManager.Instance.GameOver("Truck Destroyed","Your truck is destroyed! well duh!");
         //    return;
         //}
 
-        if (ResourceManager.Instance.fuel <= 0)
-        {
-            eventPanel.SetActive(false);
+        //if (RunManager.Instance.IsGameFinished)
+        //{
+        //    eventPanel.SetActive(false);
+        //    return;
+        //}
 
-            RunManager.Instance.GameOver("Out of Fuel","Your truck ran out of fuel!");
-
-            return;
-        }
-
-        if (ResourceManager.Instance.truckCondition <= 0)
-        {
-            eventPanel.SetActive(false);
-
-            RunManager.Instance.GameOver("Truck Destroyed","Your truck was damaged beyond repair!");
-
-            return;
-        }
-
-        if (ResourceManager.Instance.cargoIntegrity <= 0)
-        {
-            eventPanel.SetActive(false);
-
-            RunManager.Instance.GameOver("Cargo Destroyed","The cargo was completely destroyed!");
-
-            return;
-        }
-        #endregion
-
-        RunManager.Instance.AdvanceStage();
-
-        if (RunManager.Instance.IsChoosingUpgrade)
-        {
-            eventPanel.SetActive(false);
-            return;
-        }
-
-        if (RunManager.Instance.IsGameFinished)
-        {
-            eventPanel.SetActive(false);
-            return;
-        }
-
-        eventPanel.SetActive(false);
-        StartCoroutine(NextEventRoutine());
+        //eventPanel.SetActive(false);
+        //StartCoroutine(NextEventRoutine());
     }
 
     private IEnumerator NextEventRoutine()
@@ -149,5 +141,43 @@ public class EventManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         GenerateEvent();
+    }
+
+    public void ContinueAfterResult()
+    {
+        resultPanel.SetActive(false);
+
+        CheckGameState();
+    }
+
+    private void CheckGameState()
+    {
+        if (ResourceManager.Instance.fuel <= 0)
+        {
+            RunManager.Instance.GameOver("Out of Fuel","Your truck ran out of fuel!");
+            return;
+        }
+
+        if (ResourceManager.Instance.truckCondition <= 0)
+        {
+            RunManager.Instance.GameOver("Truck Destroyed","Your truck was damaged beyond repair!");
+            return;
+        }
+
+        if (ResourceManager.Instance.cargoIntegrity <= 0)
+        {
+            RunManager.Instance.GameOver("Cargo Destroyed","The cargo was completely destroyed!");
+            return;
+        }
+
+        RunManager.Instance.AdvanceStage();
+
+        if (RunManager.Instance.IsChoosingUpgrade)
+            return;
+
+        if (RunManager.Instance.IsGameFinished)
+            return;
+
+        StartCoroutine(NextEventRoutine());
     }
 }

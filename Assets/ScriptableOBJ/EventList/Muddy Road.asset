@@ -19,14 +19,39 @@ MonoBehaviour:
   maxLevel: 2
   choices:
   - choiceText: Just push Through
-    fuelChange: -5
-    truckChange: -5
-    cargoChange: -5
+    successChance: 70
+    successOutcome:
+      resultText: You drove along a muddy road and managed to get out!
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You drove along a muddy road and damaged your truck!
+      fuelChange: 0
+      truckChange: -20
+      cargoChange: 0
   - choiceText: Look for a Detour
-    fuelChange: -10
-    truckChange: 0
-    cargoChange: 0
+    successChance: 70
+    successOutcome:
+      resultText: You found the fastest detour!
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You found a detour after two hours, you wasted a lot of fuel!
+      fuelChange: -20
+      truckChange: 0
+      cargoChange: 0
   - choiceText: Wait until it dries
-    fuelChange: 0
-    truckChange: 0
-    cargoChange: 0
+    successChance: 30
+    successOutcome:
+      resultText: You wait for the mud to dry and then pass through!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You were waiting for the mud to dry, but suddenly it started raining
+        and ruined your cargo.
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: -20

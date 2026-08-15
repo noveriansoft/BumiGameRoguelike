@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Cargo Robbery
+  m_EditorClassIdentifier: 
+  eventTitle: Cargo Robbery
+  description: Yhey want some of your cargo contents
+  allLevels: 0
+  minLevel: 4
+  maxLevel: 4
+  choices:
+  - choiceText: Try to Escape
+    successChance: 50
+    successOutcome:
+      resultText: You managed to escape from the robbers with full speed!
+      fuelChange: -20
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The robbers managed to capture you and seize a large amount of
+        cargo!
+      fuelChange: -20
+      truckChange: 0
+      cargoChange: -70
+  - choiceText: Give them some
+    successChance: 70
+    successOutcome:
+      resultText: You negotiated with the robbers, and they only took some of the
+        cargo!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: -30
+    failureOutcome:
+      resultText: You negotiate with the robbers, but they take even more of your
+        cargo! womp womp!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: -50
+  - choiceText: Try Acting Pitiful
+    successChance: 20
+    successOutcome:
+      resultText: The robbers were enraged, they hit the truck and took away much
+        of your cargo!
+      fuelChange: 0
+      truckChange: -50
+      cargoChange: -50
+    failureOutcome:
+      resultText: The robbers felt sorry and didn't rob you!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0

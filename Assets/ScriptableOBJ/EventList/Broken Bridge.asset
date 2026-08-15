@@ -14,19 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventTitle: Broken Bridge
   description: oh no, the bridge is broken!
-  allLevels: 0
+  allLevels: 1
   minLevel: 1
   maxLevel: 1
   choices:
   - choiceText: Look for a Detour
-    fuelChange: -5
-    truckChange: 0
-    cargoChange: 0
+    successChance: 50
+    successOutcome:
+      resultText: You found the fastest detour!
+      fuelChange: -7
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You found a detour after two hours, you wasted a lot of fuel!
+      fuelChange: -20
+      truckChange: 0
+      cargoChange: 0
   - choiceText: Try Jumping
-    fuelChange: -2
-    truckChange: -10
-    cargoChange: -10
+    successChance: 40
+    successOutcome:
+      resultText: Miraculously, you managed to jump with the truck!
+      fuelChange: -5
+      truckChange: -5
+      cargoChange: -5
+    failureOutcome:
+      resultText: You jumped with the truck and damaged a lot of cargo and the truck
+        itself!
+      fuelChange: -5
+      truckChange: -30
+      cargoChange: -40
   - choiceText: Repair the Bridge
-    fuelChange: 0
-    truckChange: 0
-    cargoChange: -20
+    successChance: 70
+    successOutcome:
+      resultText: You managed to find materials around the bridge and repair it!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You couldn't find materials to repair the bridge and were forced
+        to use some of the cargo from the truck!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: -50

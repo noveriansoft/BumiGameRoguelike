@@ -14,16 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventTitle: Heavy Rain
   description: This rain is too heavy to continue.
+  allLevels: 1
+  minLevel: 1
+  maxLevel: 1
   choices:
   - choiceText: Look for Shelter
-    fuelChange: -6
-    truckChange: 0
-    cargoChange: 0
+    successChance: 70
+    successOutcome:
+      resultText: You found nearby shelter!
+      fuelChange: -6
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You couldn't find shelter and wasted fuel searching!
+      fuelChange: -20
+      truckChange: 0
+      cargoChange: 0
   - choiceText: Just push Through
-    fuelChange: -5
-    truckChange: -6
-    cargoChange: -10
+    successChance: 70
+    successOutcome:
+      resultText: You try to push through the rain, and suddenly it stops!
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: you try to break through this rain and damage your cargo and truck!
+      fuelChange: -10
+      truckChange: -20
+      cargoChange: -20
   - choiceText: Wait in the Rain
-    fuelChange: 0
-    truckChange: 0
-    cargoChange: -20
+    successChance: 37
+    successOutcome:
+      resultText: You wait for the rain to stop in the middle of the rain, suddenly
+        the rain stops!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You wait for the rain to stop in the middle of the rain, suddenly
+        the rain gets heavier damaged the cargo!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: -40
