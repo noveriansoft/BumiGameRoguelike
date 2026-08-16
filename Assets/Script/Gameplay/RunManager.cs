@@ -16,6 +16,9 @@ public class RunManager : MonoBehaviour
     public int currentStage;
     public int stagesPerLevel = 5;
 
+    [Header("Lvl-Stage UI")]
+    [SerializeField] private TMP_Text levelText;
+
     [Header("End UI")]
     [SerializeField] private GameObject winPanel;
     [SerializeField] private TMP_Text WinLoseText;
@@ -26,9 +29,16 @@ public class RunManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        UpdateLevelUI();
+    }
+
     public void AdvanceStage()
     {
         currentStage++;
+
+        UpdateLevelUI();
 
         if (currentStage >= stagesPerLevel)
         {
@@ -47,6 +57,7 @@ public class RunManager : MonoBehaviour
         }
 
         currentLevel++;
+        FindFirstObjectByType<InfiniteBackground>().SetLevelBackground(currentLevel);
         IsChoosingUpgrade = true;
         UpgradeManager.Instance.ShowUpgradePanel();
     }
@@ -58,6 +69,11 @@ public class RunManager : MonoBehaviour
         winPanel.SetActive(true);
         WinLoseText.text = "Destination Reached";
         endDescText.text = "You successfully delivered the cargo!";
+    }
+
+    private void UpdateLevelUI()
+    {
+        levelText.text = $"Level {currentLevel} - {currentStage}";
     }
 
     public void GameOver(string condition, string description)

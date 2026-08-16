@@ -15,4 +15,4 @@ MonoBehaviour:
   upgradeName: Repair Truck
   description: Repairing your truck
   upgradeType: 2
-  value: 30
+  value: 10
