@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class RunManager : MonoBehaviour
 {
@@ -67,5 +68,17 @@ public class RunManager : MonoBehaviour
 
         WinLoseText.text = condition;
         endDescText.text = description;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+
+        Debug.Log("Exit Game");
     }
 }
