@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Traveling Merchant
+  m_EditorClassIdentifier: 
+  eventTitle: Traveling Merchant
+  description: A merchant offers to trade supplies
+  allLevels: 0
+  minLevel: 2
+  maxLevel: 3
+  choices:
+  - choiceText: Buy Fuel
+    successChance: 80
+    successOutcome:
+      resultText: The merchant's fuel is legitimate
+      fuelChange: 20
+      truckChange: 0
+      cargoChange: -10
+    failureOutcome:
+      resultText: The fuel is low quality and damages the engine.
+      fuelChange: 0
+      truckChange: -10
+      cargoChange: -10
+  - choiceText: Buy Spare Parts
+    successChance: 70
+    successOutcome:
+      resultText: You repair several worn components
+      fuelChange: 0
+      truckChange: 15
+      cargoChange: -10
+    failureOutcome:
+      resultText: The parts don't fit your truck!
+      fuelChange: 0
+      truckChange: -10
+      cargoChange: -10
+  - choiceText: Walk Away
+    successChance: 90
+    successOutcome:
+      resultText: You save your supplies
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You later realize the merchant's prices were actually good
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0

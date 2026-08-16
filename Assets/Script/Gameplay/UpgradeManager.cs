@@ -65,7 +65,7 @@ public class UpgradeManager : MonoBehaviour
                 break;
 
             case UpgradeType.RepairTruck:
-                ResourceManager.Instance.RepairTruck(upgrade.value);
+                ResourceManager.Instance.ModifyTruckCondition(upgrade.value);
                 break;
 
             case UpgradeType.AddMaxCargo:

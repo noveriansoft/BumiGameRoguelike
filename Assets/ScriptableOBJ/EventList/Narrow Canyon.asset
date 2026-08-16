@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Narrow Canyon
+  m_EditorClassIdentifier: 
+  eventTitle: Narrow Canyon
+  description: A narrow canyon could save time, but the path looks unstable
+  allLevels: 0
+  minLevel: 3
+  maxLevel: 3
+  choices:
+  - choiceText: Take the Canyon
+    successChance: 60
+    successOutcome:
+      resultText: The shortcut saves fuel
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: Loose rocks strike the truck as you pass
+      fuelChange: -5
+      truckChange: -10
+      cargoChange: 0
+  - choiceText: Use the Main Road
+    successChance: 70
+    successOutcome:
+      resultText: The route is longer but safe
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: A fallen rock forces an unexpected detour!
+      fuelChange: -20
+      truckChange: 0
+      cargoChange: 0
+  - choiceText: Clear the Path
+    successChance: 50
+    successOutcome:
+      resultText: You remove enough debris to travel safely!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: A rock rolls downhill and hits the truck!
+      fuelChange: 0
+      truckChange: -20
+      cargoChange: -20

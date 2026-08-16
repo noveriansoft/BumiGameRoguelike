@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Cargo Robbery
   m_EditorClassIdentifier: 
   eventTitle: Cargo Robbery
-  description: Yhey want some of your cargo contents
+  description: They want some of your cargo contents
   allLevels: 0
   minLevel: 4
-  maxLevel: 4
+  maxLevel: 5
   choices:
   - choiceText: Try to Escape
     successChance: 50

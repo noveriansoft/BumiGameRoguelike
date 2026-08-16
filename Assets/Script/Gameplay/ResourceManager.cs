@@ -33,6 +33,7 @@ public class ResourceManager : MonoBehaviour
     public void ModifyFuel(int amount)
     {
         fuel += amount;
+        fuel = Mathf.Clamp(fuel, 0, maxFuel);
         UpdateUI();
     }
 
@@ -46,22 +47,14 @@ public class ResourceManager : MonoBehaviour
     public void ModifyTruckCondition(int amount)
     {
         truckCondition += amount;
+        truckCondition = Mathf.Clamp(truckCondition, 0, maxTruckCondition);
         UpdateUI();
     }
 
     public void ModifyCargo(int amount)
     {
         cargoIntegrity += amount;
-        UpdateUI();
-    }
-
-    public void RepairTruck(int amount)
-    {
-        truckCondition += amount;
-
-        if (truckCondition > maxTruckCondition)
-            truckCondition = maxTruckCondition;
-
+        cargoIntegrity = Mathf.Clamp(cargoIntegrity, 0, maxCargoIntegrity);
         UpdateUI();
     }
 

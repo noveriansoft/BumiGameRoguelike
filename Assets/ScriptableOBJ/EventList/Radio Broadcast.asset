@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Radio Broadcast
+  m_EditorClassIdentifier: 
+  eventTitle: Radio Broadcast
+  description: A weak radio signal interrupts the static
+  allLevels: 0
+  minLevel: 1
+  maxLevel: 5
+  choices:
+  - choiceText: Follow the Directions
+    successChance: 50
+    successOutcome:
+      resultText: The broadcast leads you to useful supplies
+      fuelChange: 15
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The directions are outdated and lead nowhere
+      fuelChange: -15
+      truckChange: 0
+      cargoChange: 0
+  - choiceText: Ignore the Signal
+    successChance: 100
+    successOutcome:
+      resultText: You stay on course
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The wreck contains little worth taking
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0
+  - choiceText: Trace the Source
+    successChance: 50
+    successOutcome:
+      resultText: You locate an abandoned supply cache
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 15
+    failureOutcome:
+      resultText: You spend hours searching without finding anything
+      fuelChange: -15
+      truckChange: 0
+      cargoChange: 0

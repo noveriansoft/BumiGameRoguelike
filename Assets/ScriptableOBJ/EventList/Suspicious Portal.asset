@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Suspicious Portal
+  m_EditorClassIdentifier: 
+  eventTitle: Suspicious Portal
+  description: A glowing orange-and-blue portal appears beside the road
+  allLevels: 0
+  minLevel: 4
+  maxLevel: 5
+  choices:
+  - choiceText: Enter the Portal
+    successChance: 40
+    successOutcome:
+      resultText: You emerge somewhere closer to your destination
+      fuelChange: 5
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You emerge upside down. The truck doesn't appreciate it
+      fuelChange: -10
+      truckChange: -10
+      cargoChange: -10
+  - choiceText: Throw Cargo Through
+    successChance: 70
+    successOutcome:
+      resultText: The cargo comes back with extra supplies attached
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 15
+    failureOutcome:
+      resultText: The cargo never comes back
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: -15
+  - choiceText: Ignore It
+    successChance: 90
+    successOutcome:
+      resultText: You decide not to question reality today
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The portal closes, launching debris at your truck
+      fuelChange: 0
+      truckChange: -50
+      cargoChange: 0

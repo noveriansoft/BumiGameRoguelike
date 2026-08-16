@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Friendly Salesman
+  m_EditorClassIdentifier: 
+  eventTitle: Friendly Salesman
+  description: A smiling salesman appears and says, "I've got a settlement that needs
+    your help"
+  allLevels: 0
+  minLevel: 3
+  maxLevel: 4
+  choices:
+  - choiceText: Hear Him Out
+    successChance: 60
+    successOutcome:
+      resultText: He rewards your attention with useful supplies
+      fuelChange: 10
+      truckChange: 0
+      cargoChange: 15
+    failureOutcome:
+      resultText: He keeps talking for several hours
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0
+  - choiceText: Ask for Directions
+    successChance: 70
+    successOutcome:
+      resultText: He marks a shortcut on your map
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The shortcut leads to a dead end
+      fuelChange: -15
+      truckChange: 0
+      cargoChange: 0
+  - choiceText: Drive Away
+    successChance: 70
+    successOutcome:
+      resultText: You escape before he can finish another sentence
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: He somehow catches up and keeps talking
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0

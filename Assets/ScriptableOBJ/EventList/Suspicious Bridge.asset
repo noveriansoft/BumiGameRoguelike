@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Suspicious Bridge
+  m_EditorClassIdentifier: 
+  eventTitle: Suspicious Bridge
+  description: A wooden bridge crosses a deep ravine
+  allLevels: 0
+  minLevel: 3
+  maxLevel: 4
+  choices:
+  - choiceText: Cross Carefully
+    successChance: 70
+    successOutcome:
+      resultText: The bridge creaks, but holds
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: A support beam breaks and damages the truck!
+      fuelChange: 0
+      truckChange: -20
+      cargoChange: 0
+  - choiceText: Drive Fast
+    successChance: 40
+    successOutcome:
+      resultText: You make it across before anything collapses
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The bridge partially collapses beneath you!
+      fuelChange: -10
+      truckChange: -30
+      cargoChange: -15
+  - choiceText: Find Another Route
+    successChance: 85
+    successOutcome:
+      resultText: You find a safer crossing
+      fuelChange: -15
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The alternate route is much longer than expected
+      fuelChange: -25
+      truckChange: 0
+      cargoChange: 0

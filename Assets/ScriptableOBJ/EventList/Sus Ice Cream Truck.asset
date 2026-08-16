@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Sus Ice Cream Truck
+  m_EditorClassIdentifier: 
+  eventTitle: Sus Ice Cream Truck
+  description: Somehow, an ice cream truck is parked in the middle of nowhere
+  allLevels: 0
+  minLevel: 2
+  maxLevel: 2
+  choices:
+  - choiceText: Check the Freezer
+    successChance: 70
+    successOutcome:
+      resultText: The freezer still works. Cold drinks included!
+      fuelChange: 10
+      truckChange: 0
+      cargoChange: 5
+    failureOutcome:
+      resultText: The freezer door fell off and hit your truck!
+      fuelChange: 0
+      truckChange: -10
+      cargoChange: 0
+  - choiceText: Salvage Parts
+    successChance: 60
+    successOutcome:
+      resultText: You found some useful components!
+      fuelChange: 0
+      truckChange: 15
+      cargoChange: 0
+    failureOutcome:
+      resultText: Everything inside was rusted junk!
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0
+  - choiceText: Move Along
+    successChance: 100
+    successOutcome:
+      resultText: You left the ice cream truck
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The scouting trip accomplished nothing but loss on fuel!
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0

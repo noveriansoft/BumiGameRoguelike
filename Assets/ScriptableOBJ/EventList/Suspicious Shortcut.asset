@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Suspicious Shortcut
+  m_EditorClassIdentifier: 
+  eventTitle: Suspicious Shortcut
+  description: A narrow road could save time!
+  allLevels: 0
+  minLevel: 3
+  maxLevel: 5
+  choices:
+  - choiceText: Take the Shortcut
+    successChance: 40
+    successOutcome:
+      resultText: The shortcut actually worked!
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The shortcut is full of potholes, causing cargo and trucks to shake
+        violently!
+      fuelChange: -10
+      truckChange: -20
+      cargoChange: -10
+  - choiceText: Stay on Main Road
+    successChance: 90
+    successOutcome:
+      resultText: Boring, but reliable!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You hit unexpected traffic and wasted fuel!
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0
+  - choiceText: Scout Ahead
+    successChance: 70
+    successOutcome:
+      resultText: You found a safer route!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The scouting trip accomplished nothing but loss on fuel!
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0

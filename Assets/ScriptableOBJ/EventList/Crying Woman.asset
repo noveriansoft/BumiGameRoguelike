@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Crying Woman
+  m_EditorClassIdentifier: 
+  eventTitle: Crying Woman
+  description: You spot a woman sitting beside the road, crying and waving for help.
+  allLevels: 0
+  minLevel: 4
+  maxLevel: 5
+  choices:
+  - choiceText: Stop and Help
+    successChance: 40
+    successOutcome:
+      resultText: The woman was a genuine traveler whose vehicle had broken down.
+        She rewards you with fuel from her reserve
+      fuelChange: 15
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: It was an ambush. Hidden bandits emerge from nearby ruins and rob
+        part of your cargo
+      fuelChange: 0
+      truckChange: -20
+      cargoChange: -20
+  - choiceText: Ignore Her
+    successChance: 85
+    successOutcome:
+      resultText: You continue driving without stopping
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The woman was actually warning travelers about a damaged bridge
+        ahead
+      fuelChange: 0
+      truckChange: -15
+      cargoChange: -15
+  - choiceText: Offer Supplies & Keep Driving
+    successChance: 70
+    successOutcome:
+      resultText: You toss some supplies out the window and continue on your way
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The distraction gives hidden raiders time to approach
+      fuelChange: -10
+      truckChange: -45
+      cargoChange: -30

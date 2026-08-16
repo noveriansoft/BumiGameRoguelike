@@ -557,7 +557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 325}
+  m_AnchoredPosition: {x: 0, y: 258}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &316608875
@@ -646,8 +646,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -785,8 +785,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1158,9 +1158,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events:
+  - {fileID: 11400000, guid: 6c4075e6956b6be4b8ab7aaff2359328, type: 2}
+  - {fileID: 11400000, guid: 800f3eca63f45f84a87652f949509529, type: 2}
+  - {fileID: 11400000, guid: 479b3ee691297ee4a943659526320e4d, type: 2}
+  - {fileID: 11400000, guid: b86b48e881e9b3f4ea893641ef416e9c, type: 2}
+  - {fileID: 11400000, guid: 19474ab1c3e45d54bbdef75067cc56d4, type: 2}
   - {fileID: 11400000, guid: c61ff6eb1fbd6114ba4cd9096143bb62, type: 2}
-  - {fileID: 11400000, guid: 6667ce945c0ef174e802d16d83255581, type: 2}
   - {fileID: 11400000, guid: c841e78659b7fa8488b1efc511252bd6, type: 2}
+  - {fileID: 11400000, guid: 2b9e9d2d93988504ebaee3efdf31c70b, type: 2}
+  - {fileID: 11400000, guid: 9e7b93c5b565ba2458c8527cc652b30f, type: 2}
+  - {fileID: 11400000, guid: dfcd21c1ddd77494a8edf85ce59f846d, type: 2}
+  - {fileID: 11400000, guid: 650653f40ed8ee049bf468ba96b4c69a, type: 2}
+  - {fileID: 11400000, guid: 895b780886d99734ca82f1542518aad2, type: 2}
+  - {fileID: 11400000, guid: 54cb7861e77770d47975df7dd3743bd4, type: 2}
+  - {fileID: 11400000, guid: e1eb98bfa70790c479d438d538ca3806, type: 2}
+  - {fileID: 11400000, guid: a09d721fe3b0c554bbefbc0cd1e0c4af, type: 2}
+  - {fileID: 11400000, guid: 77d8b3d64d991f54caba65b4a7e88f79, type: 2}
+  - {fileID: 11400000, guid: b02b9079a813e6b4799bb2eeeca0ee46, type: 2}
+  - {fileID: 11400000, guid: 36f36152ef38c7742a643b8a8024708e, type: 2}
+  - {fileID: 11400000, guid: c44258923162d7d4da9aebfe4f893af7, type: 2}
+  - {fileID: 11400000, guid: 0224a51c82df48040a14b2273e0c2b10, type: 2}
+  - {fileID: 11400000, guid: 7b3f47d334250e34cb4c2624a8747f0e, type: 2}
+  - {fileID: 11400000, guid: c68198945aa12794ca620e45c20dfefe, type: 2}
+  - {fileID: 11400000, guid: d21c943cb857b124d850585005ba2281, type: 2}
+  - {fileID: 11400000, guid: bbbaa111ca1e87745bfe45f1a51cd546, type: 2}
+  - {fileID: 11400000, guid: 94573f6ee692da549ad19fade1a6e612, type: 2}
+  - {fileID: 11400000, guid: dd8d0410b88ebfd46834ba6e8256401b, type: 2}
   eventPanel: {fileID: 1588055686}
   titleText: {fileID: 740803502}
   descriptionText: {fileID: 465088863}
@@ -1209,7 +1232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 1
-  maxLevel: 4
+  maxLevel: 5
   currentStage: 0
   stagesPerLevel: 5
   winPanel: {fileID: 1517365782}
@@ -1276,7 +1299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -97.99997}
+  m_AnchoredPosition: {x: 0, y: -141}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &465088863
@@ -1299,7 +1322,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Event Desc Here
+  m_text: There could be enough fuel and supplies here to finish the journey. Unfortunately,
+    someone else seems to have the same idea.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1326,8 +1350,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1343,7 +1367,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -1365,7 +1389,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -800.63916, y: 0, z: -812.9451, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1905,7 +1929,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -371.99997}
+  m_AnchoredPosition: {x: 0, y: -457}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &724660288
@@ -2847,7 +2871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 247}
+  m_AnchoredPosition: {x: 0, y: 180}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1141747194
@@ -3323,8 +3347,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3684,7 +3708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -67.00001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1533211228
@@ -3897,7 +3921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 325}
+  m_AnchoredPosition: {x: 0, y: 258}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1637854727

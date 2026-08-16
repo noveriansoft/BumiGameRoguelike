@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Fuel Tanker Wreck
+  m_EditorClassIdentifier: 
+  eventTitle: Fuel Tanker Wreck
+  description: A crashed fuel tanker lies beside the road
+  allLevels: 0
+  minLevel: 4
+  maxLevel: 5
+  choices:
+  - choiceText: Salvage Fuel
+    successChance: 50
+    successOutcome:
+      resultText: You recover a large amount of fuel
+      fuelChange: 40
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: A fuel leak ignites while you're working
+      fuelChange: 0
+      truckChange: -30
+      cargoChange: 0
+  - choiceText: Salvage Parts
+    successChance: 50
+    successOutcome:
+      resultText: You recover valuable mechanical parts
+      fuelChange: 0
+      truckChange: 20
+      cargoChange: 0
+    failureOutcome:
+      resultText: The wreck contains little worth taking
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0
+  - choiceText: Leave It Alone
+    successChance: 100
+    successOutcome:
+      resultText: You avoid unnecessary risks
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You later realize the merchant's prices were actually good
+      fuelChange: -5
+      truckChange: 0
+      cargoChange: 0

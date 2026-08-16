@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Fallen Tree
+  m_EditorClassIdentifier: 
+  eventTitle: Fallen Tree
+  description: A large tree blocks the road
+  allLevels: 1
+  minLevel: 1
+  maxLevel: 1
+  choices:
+  - choiceText: Push Through
+    successChance: 70
+    successOutcome:
+      resultText: The truck forced its way through!
+      fuelChange: 0
+      truckChange: -5
+      cargoChange: 0
+    failureOutcome:
+      resultText: The tree didn't move much. The truck did!
+      fuelChange: 0
+      truckChange: -20
+      cargoChange: 0
+  - choiceText: Go Around
+    successChance: 70
+    successOutcome:
+      resultText: You found another route!
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: The alternate path damaged some cargo!
+      fuelChange: -10
+      truckChange: 0
+      cargoChange: -20
+  - choiceText: Clear It Yourself
+    successChance: 70
+    successOutcome:
+      resultText: After some effort, the road was clear!
+      fuelChange: 0
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: You couldn't clear it completely and damaged your truck!
+      fuelChange: 0
+      truckChange: -20
+      cargoChange: 0

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c69e51ec7099c478b7b22141c75487, type: 3}
+  m_Name: Military Convoy
+  m_EditorClassIdentifier: 
+  eventTitle: Military Convoy
+  description: There could be enough fuel and supplies here to finish the journey.
+    Unfortunately, someone else seems to have the same idea.
+  allLevels: 0
+  minLevel: 5
+  maxLevel: 5
+  choices:
+  - choiceText: Loot the Fuel Truck
+    successChance: 30
+    successOutcome:
+      resultText: You managed to siphon fuel from a military tanker before anyone
+        noticed
+      fuelChange: 50
+      truckChange: 0
+      cargoChange: 0
+    failureOutcome:
+      resultText: A hidden explosive detonates while you're working!
+      fuelChange: -20
+      truckChange: -40
+      cargoChange: -50
+  - choiceText: Search the Convoy
+    successChance: 20
+    successOutcome:
+      resultText: You found military supplies and spare parts scattered among the
+        wrecks
+      fuelChange: 30
+      truckChange: 20
+      cargoChange: 0
+    failureOutcome:
+      resultText: The wrecks collapse as you search them, damaging your truck.
+      fuelChange: 0
+      truckChange: -45
+      cargoChange: -35
+  - choiceText: Ambush the Scavengers
+    successChance: 15
+    successOutcome:
+      resultText: The scavengers flee, leaving all their loot behind
+      fuelChange: 40
+      truckChange: 40
+      cargoChange: 40
+    failureOutcome:
+      resultText: The scavengers were heavily armed. You barely escaped
+      fuelChange: -10
+      truckChange: -45
+      cargoChange: -30
