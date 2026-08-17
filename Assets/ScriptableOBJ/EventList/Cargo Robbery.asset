@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 5
   choices:
   - choiceText: Try to Escape
-    successChance: 20
+    successChance: 10
     successOutcome:
       resultText: You managed to escape from the robbers with full speed!
       fuelChange: -20

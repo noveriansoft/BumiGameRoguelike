@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 5
   choices:
   - choiceText: Follow the Directions
-    successChance: 50
+    successChance: 20
     successOutcome:
       resultText: The broadcast leads you to useful supplies
       fuelChange: 15
@@ -43,7 +43,7 @@ MonoBehaviour:
       truckChange: 0
       cargoChange: 0
   - choiceText: Trace the Source
-    successChance: 50
+    successChance: 30
     successOutcome:
       resultText: You locate an abandoned supply cache
       fuelChange: 0

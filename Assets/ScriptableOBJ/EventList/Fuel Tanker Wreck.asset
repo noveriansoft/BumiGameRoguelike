@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 5
   choices:
   - choiceText: Salvage Fuel
-    successChance: 50
+    successChance: 10
     successOutcome:
       resultText: You recover a large amount of fuel
       fuelChange: 40
@@ -31,7 +31,7 @@ MonoBehaviour:
       truckChange: -30
       cargoChange: 0
   - choiceText: Salvage Parts
-    successChance: 50
+    successChance: 20
     successOutcome:
       resultText: You recover valuable mechanical parts
       fuelChange: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 1
   choices:
   - choiceText: Push Through
-    successChance: 70
+    successChance: 10
     successOutcome:
       resultText: The truck forced its way through!
       fuelChange: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
       resultText: The tree didn't move much. The truck did!
       fuelChange: 0
       truckChange: -20
-      cargoChange: 0
+      cargoChange: -20
   - choiceText: Go Around
     successChance: 70
     successOutcome:
@@ -43,7 +43,7 @@ MonoBehaviour:
       truckChange: 0
       cargoChange: -20
   - choiceText: Clear It Yourself
-    successChance: 70
+    successChance: 40
     successOutcome:
       resultText: After some effort, the road was clear!
       fuelChange: 0
