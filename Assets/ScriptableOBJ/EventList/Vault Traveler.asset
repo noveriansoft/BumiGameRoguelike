@@ -17,7 +17,7 @@ MonoBehaviour:
     a place called Vault 76.
   allLevels: 0
   minLevel: 3
-  maxLevel: 3
+  maxLevel: 4
   choices:
   - choiceText: Give Him a Ride
     successChance: 70

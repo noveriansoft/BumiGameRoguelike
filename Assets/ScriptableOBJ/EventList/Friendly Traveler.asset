@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 3
   choices:
   - choiceText: Help Them
-    successChance: 70
+    successChance: 30
     successOutcome:
       resultText: The traveler repaid your kindness!
       fuelChange: 10
@@ -44,7 +44,7 @@ MonoBehaviour:
       truckChange: 0
       cargoChange: 0
   - choiceText: Trade Supplies
-    successChance: 80
+    successChance: 40
     successOutcome:
       resultText: A fair trade!
       fuelChange: 20

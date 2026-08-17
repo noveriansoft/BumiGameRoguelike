@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 5
   choices:
   - choiceText: Ram Through
-    successChance: 50
+    successChance: 30
     successOutcome:
       resultText: The truck smashed through the barricade!
       fuelChange: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
       truckChange: 0
       cargoChange: -40
   - choiceText: Take a Detour
-    successChance: 70
+    successChance: 10
     successOutcome:
       resultText: The detour was longer, but safe!
       fuelChange: -15

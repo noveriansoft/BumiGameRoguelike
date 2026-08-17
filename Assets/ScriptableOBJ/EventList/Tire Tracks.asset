@@ -16,10 +16,10 @@ MonoBehaviour:
   description: ' You notice fresh tire tracks leading off the main road!'
   allLevels: 0
   minLevel: 1
-  maxLevel: 1
+  maxLevel: 2
   choices:
   - choiceText: Follow the Tracks
-    successChance: 70
+    successChance: 50
     successOutcome:
       resultText: You discovered a small abandoned campsite. Whoever was here left
         some fuel behind!
@@ -32,7 +32,7 @@ MonoBehaviour:
       truckChange: 0
       cargoChange: 0
   - choiceText: Stay on the Road
-    successChance: 90
+    successChance: 60
     successOutcome:
       resultText: You stick to the main route and avoid unnecessary risks
       fuelChange: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
       truckChange: -10
       cargoChange: 0
   - choiceText: Search Nearby
-    successChance: 60
+    successChance: 40
     successOutcome:
       resultText: You found a toolbox hidden under some bushes
       fuelChange: 0

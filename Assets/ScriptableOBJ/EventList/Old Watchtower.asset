@@ -19,20 +19,20 @@ MonoBehaviour:
   maxLevel: 2
   choices:
   - choiceText: Climb the Tower
-    successChance: 70
+    successChance: 50
     successOutcome:
       resultText: From the top, you spot a shorter route ahead
       fuelChange: -2
       truckChange: 0
       cargoChange: 0
     failureOutcome:
-      resultText: The stairs collapse beneath you. The truck is fine, but you waste
+      resultText: The stairs collapse beneath you. and hit the truck, and you waste
         valuable time
       fuelChange: -10
-      truckChange: 0
+      truckChange: -20
       cargoChange: 0
   - choiceText: Salvage Materials
-    successChance: 60
+    successChance: 20
     successOutcome:
       resultText: You recover sturdy metal parts from the structure
       fuelChange: 0

@@ -17,10 +17,10 @@ MonoBehaviour:
     making a loud beeping sound. That's probably fine.
   allLevels: 0
   minLevel: 4
-  maxLevel: 4
+  maxLevel: 5
   choices:
   - choiceText: Open It
-    successChance: 30
+    successChance: 20
     successOutcome:
       resultText: The briefcase contains emergency fuel vouchers and spare parts
       fuelChange: 25
@@ -30,10 +30,10 @@ MonoBehaviour:
       resultText: The briefcase was a bomb. The explosion damages your truck and
         cargo
       fuelChange: 0
-      truckChange: -20
-      cargoChange: -20
+      truckChange: -50
+      cargoChange: -50
   - choiceText: Throw It Away
-    successChance: 70
+    successChance: 40
     successOutcome:
       resultText: You toss the briefcase into a ditch. Moments later, it explodes
       fuelChange: 0

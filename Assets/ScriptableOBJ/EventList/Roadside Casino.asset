@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 5
   choices:
   - choiceText: Bet Fuel
-    successChance: 50
+    successChance: 20
     successOutcome:
       resultText: You doubled your fuel!
       fuelChange: 50
@@ -31,7 +31,7 @@ MonoBehaviour:
       truckChange: -20
       cargoChange: 0
   - choiceText: Bet Cargo
-    successChance: 50
+    successChance: 30
     successOutcome:
       resultText: You doubled your cargo!
       fuelChange: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 2
   choices:
   - choiceText: Check the Freezer
-    successChance: 70
+    successChance: 50
     successOutcome:
       resultText: The freezer still works. Cold drinks included!
       fuelChange: 10
@@ -31,7 +31,7 @@ MonoBehaviour:
       truckChange: -10
       cargoChange: 0
   - choiceText: Salvage Parts
-    successChance: 60
+    successChance: 40
     successOutcome:
       resultText: You found some useful components!
       fuelChange: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 4
   choices:
   - choiceText: Cross Carefully
-    successChance: 70
+    successChance: 50
     successOutcome:
       resultText: The bridge creaks, but holds
       fuelChange: -5
@@ -43,7 +43,7 @@ MonoBehaviour:
       truckChange: -30
       cargoChange: -15
   - choiceText: Find Another Route
-    successChance: 85
+    successChance: 20
     successOutcome:
       resultText: You find a safer crossing
       fuelChange: -15

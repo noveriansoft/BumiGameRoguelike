@@ -40,7 +40,6 @@ public class ResourceManager : MonoBehaviour
     public void AddMaxFuel(int amount)
     {
         maxFuel += amount;
-        fuel += amount;
         UpdateUI();
     }
 
@@ -61,16 +60,12 @@ public class ResourceManager : MonoBehaviour
     public void AddMaxTruck(int amount)
     {
         maxTruckCondition += amount;
-        truckCondition += amount;
-
         UpdateUI();
     }
 
     public void AddMaxCargo(int amount)
     {
         maxCargoIntegrity += amount;
-        cargoIntegrity += amount;
-
         UpdateUI();
     }
 

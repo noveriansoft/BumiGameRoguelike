@@ -15,4 +15,4 @@ MonoBehaviour:
   upgradeName: Fuel Refill
   description: Add Fuel
   upgradeType: 1
-  value: 20
+  value: 10

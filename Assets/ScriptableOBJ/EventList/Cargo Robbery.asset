@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 5
   choices:
   - choiceText: Try to Escape
-    successChance: 50
+    successChance: 20
     successOutcome:
       resultText: You managed to escape from the robbers with full speed!
       fuelChange: -20
@@ -29,7 +29,7 @@ MonoBehaviour:
       resultText: The robbers managed to capture you and seize a large amount of
         cargo!
       fuelChange: -20
-      truckChange: 0
+      truckChange: -20
       cargoChange: -70
   - choiceText: Give them some
     successChance: 70
@@ -46,15 +46,15 @@ MonoBehaviour:
       truckChange: 0
       cargoChange: -50
   - choiceText: Try Acting Pitiful
-    successChance: 20
+    successChance: 10
     successOutcome:
-      resultText: The robbers were enraged, they hit the truck and took away much
-        of your cargo!
-      fuelChange: 0
-      truckChange: -50
-      cargoChange: -50
-    failureOutcome:
       resultText: The robbers felt sorry and didn't rob you!
       fuelChange: 0
       truckChange: 0
       cargoChange: 0
+    failureOutcome:
+      resultText: 'The robbers were enraged, they hit the truck and took away much
+        of your cargo! '
+      fuelChange: 0
+      truckChange: -50
+      cargoChange: -50

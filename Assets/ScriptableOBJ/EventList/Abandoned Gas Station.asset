@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 2
   choices:
   - choiceText: Search the Station
-    successChance: 50
+    successChance: 30
     successOutcome:
       resultText: You found some leftover gasoline!
       fuelChange: 10
@@ -29,8 +29,8 @@ MonoBehaviour:
       resultText: The station was picked clean. You wasted time searching and scraped
         the truck on some debris.
       fuelChange: -10
-      truckChange: -5
-      cargoChange: 0
+      truckChange: -10
+      cargoChange: -15
   - choiceText: Move On
     successChance: 100
     successOutcome:

@@ -32,7 +32,7 @@ MonoBehaviour:
       truckChange: -20
       cargoChange: -10
   - choiceText: Stay on Main Road
-    successChance: 90
+    successChance: 60
     successOutcome:
       resultText: Boring, but reliable!
       fuelChange: 0

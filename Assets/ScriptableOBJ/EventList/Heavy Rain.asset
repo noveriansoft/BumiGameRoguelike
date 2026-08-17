@@ -19,7 +19,7 @@ MonoBehaviour:
   maxLevel: 1
   choices:
   - choiceText: Look for Shelter
-    successChance: 70
+    successChance: 50
     successOutcome:
       resultText: You found nearby shelter!
       fuelChange: -6
@@ -31,7 +31,7 @@ MonoBehaviour:
       truckChange: 0
       cargoChange: 0
   - choiceText: Just push Through
-    successChance: 70
+    successChance: 40
     successOutcome:
       resultText: You try to push through the rain, and suddenly it stops!
       fuelChange: -10

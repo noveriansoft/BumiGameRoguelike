@@ -16,7 +16,7 @@ MonoBehaviour:
   description: A narrow canyon could save time, but the path looks unstable
   allLevels: 0
   minLevel: 3
-  maxLevel: 3
+  maxLevel: 4
   choices:
   - choiceText: Take the Canyon
     successChance: 60

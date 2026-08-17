@@ -15,11 +15,11 @@ MonoBehaviour:
   eventTitle: Cow Crossing
   description: Moo, i say!
   allLevels: 0
-  minLevel: 4
+  minLevel: 3
   maxLevel: 5
   choices:
   - choiceText: Honk Repeatedly
-    successChance: 70
+    successChance: 40
     successOutcome:
       resultText: The cows move!
       fuelChange: -5
